@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>knownagain</title>
+	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+</head>
+
+<body>
+	<%= image_tag("general/feedback.png", :id => "feedback") %>
+	<div id="wrapper">
+    	<div id="joinlog">
+			<%= image_tag("general/join_us.png", :id => "joinus", :mouseover => image_path("general/join_us_hover.png"), :alt => "Join us!") %>
+			<%= image_tag("general/log_in.png", :id => "login", :mouseover => image_path("general/log_in_hover.png"), :alt => "Log in!") %>
+        </div>
+        
+        <div id="navi_container">
+			<%= image_tag("general/logo.png") %>
+        	<div id="navi">
+				<%= image_tag("general/navi_01.png", :mouseover => image_path("general/navi_01_hover.png"), :alt => "What is KnownAgain?") %>
+				<%= image_tag("general/navi_02.png", :mouseover => image_path("general/navi_02_hover.png"), :alt => "KnownAgain Features") %>
+				<%= image_tag("general/navi_03.png", :mouseover => image_path("general/navi_03_hover.png"), :alt => "KnownAgain Company") %>
+				<%= image_tag("general/navi_04.png", :mouseover => image_path("general/navi_04_hover.png"), :alt => "KnownAgain Networking Tips") %>
+            </div>
+      	</div>
+			<%= image_tag("general/divider.png", :id => "divider") %>
+        
+        <div id="main">
+        	<%= yield %>
+       	</div>
+        
+		<%= image_tag("general/divider_2.png", :id => "divider2") %>
+
+        <div id="footer">
+			<p>About Us | Blog | Contact us | Downloads | Mobile | Partners | Press</p>
+			<div id="right_footer">
+				<%= image_tag("general/logo_footer.png", :id => "logo_footer") %>
+				<%= image_tag("general/footer_facebook.png", :id => "facebook", :alt => "Like KnownAgain on Facebook") %>
+				<%= image_tag("general/footer_twitter.png", :id => "twitter", :alt => "Follow KnownAgain on Twitter" ) %>
+				<p>Copyright © 2011 knownagain. All rights reserved.<br />
+					User Agreement | Privacy Policy | Copyright Policy</p>
+			</div>
+        </div>
+    
+    </div>
+</body>
+</html>
